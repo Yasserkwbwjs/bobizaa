@@ -15,7 +15,7 @@ let handler = async (m, {
     if (!json.url) throw 'Error!'
     await conn.sendFile(m.chat, json.url, null, "- B O B I Z A -", m)
 }
-handler.help = ['animepic']
+handler.help = ['انمي']
 handler.tags = ['anime']
-handler.command = /^(animepic)$/i
+handler.command = /^انمي$/i
 export default handler
