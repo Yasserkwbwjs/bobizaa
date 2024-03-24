@@ -13,9 +13,9 @@ let handler = async (m, { conn, text }) => {
     m.reply(`Error`)
   }
 }
-handler.help = ['creategroup']
+handler.help = ['بوت قوم بي انشاء مجموع']
 handler.tags = ['owner']
-handler.command = /^creategroup$/
+handler.command = /^بوت قوم بي انشاء مجموع$/
 handler.owner = true
 handler.premium = false
 export default handler
