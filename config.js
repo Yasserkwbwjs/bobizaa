@@ -20,8 +20,8 @@ global.owner = [
 global.suittag = ['212617467234'];
 global.prems = ['212617467234'];
 
-global.packname = 'نيزكو🍁 bot';
-global.author = 'نيزكو🌸';
+global.packname = 'ريجو🍁 bot';
+global.author = 'ريجو🌸';
 global.wm = 'ريجو♣️;
 global.titulowm = 'ريجو❄️';
 global.titulowm2 = `ريجو💝`
