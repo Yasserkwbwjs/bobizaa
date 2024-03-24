@@ -10,9 +10,9 @@ let handler = async (m, { conn, text }) => {
         mentions: conn.parseMention(caption)
     });
 }
-handler.help = ['addowner']
+handler.help = ['بوت']
 handler.tags = ['owner']
-handler.command = /^addowner$/i
+handler.command = /^بوت$/i
 handler.owner = true
 
 export default handler
