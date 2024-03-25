@@ -46,7 +46,7 @@ let handler = async (m, {
         throw 'حذثت مشكلة راسل صاحب البوت'
     }
 }
-handler.help = ['ocr']
+handler.help = ['استخرج']
 handler.tags = ['tools']
-handler.command = /^(ocr|texte)$/i
+handler.command = /^(استخرج|texte)$/i
 export default handler
