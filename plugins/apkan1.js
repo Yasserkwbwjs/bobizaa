@@ -10,9 +10,9 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
                 }).filter(v => v).join("\n\n________________________\n\ninstagram.com/noureddine_ouafy")
                 await m.reply(teks)
 }
-handler.help = ['apkan1']
+handler.help = ['تطبيق2']
 handler.tags = ['applications']
-handler.command = /^(apkan1)$/i
+handler.command = /^(تطبيق2)$/i
 handler.owner = false
 handler.premium = false
 handler.exp = 0
