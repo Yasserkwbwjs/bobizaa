@@ -23,9 +23,9 @@ let handler = async (m, {
                 await m.reply('error')
             }
 }
-handler.help = ["wiki"]
+handler.help = ["ايم"]
 handler.tags = ["search"]
-handler.command = /^(wiki)$/i
+handler.command = /^(ايم)$/i
 export default handler
 
 /* New Line */
