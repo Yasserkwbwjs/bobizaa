@@ -31,7 +31,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   }
 }
 
-handler.help = ['chainsaw-man']
+handler.help = ['^رجل-المنشار$/i']
 handler.tags = ['anime']
 handler.command = /^رجل-المنشار$/i
 export default handler
