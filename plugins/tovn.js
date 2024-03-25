@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     if (!audio.data) throw '😣تعذرت عملية التحويل'
     conn.sendFile(m.chat, audio.data, 'audio.mp3', '', m, true, { mimetype: 'audio/mp4' })
 }
-handler.help = ['tovn']
+handler.help = ['صوت']
 handler.tags = ['tools']
-handler.command = /^(tovn)$/i
+handler.command = /^(صوت)$/i
 export default handler
