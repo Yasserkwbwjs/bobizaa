@@ -58,9 +58,9 @@ let handler = async (m, {
         }
     }
 }
-handler.help = ["apkdl"]
+handler.help = ["ابيك2"]
 handler.tags = ["applications"]
-handler.command = /^(apkdl)$/i
+handler.command = /^(ابيك2)$/i
 handler.premium = false
 export default handler
 
