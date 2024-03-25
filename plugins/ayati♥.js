@@ -68,8 +68,8 @@ if (m.isBaileys || !(m.chat in conn.qurannData)) return;
   }
 };
 
-handler.help = ["ayati"];
+handler.help = ["آية"];
 handler.tags = ["islam"];
-handler.command = /^ayati$/i;
+handler.command = /^آية$/i;
 
 export default handler;
