@@ -24,7 +24,7 @@ let handler = async (m, {
     }
 }
 handler.tags = ["pdf"]
-handler.command = handler.help = ["urltopdf"]
+handler.command = handler.help = ["مود"]
 export default handler
 
 function isValidURL(message) {
