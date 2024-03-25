@@ -13,5 +13,5 @@ let handler = async (m ,{ conn, text }) => {
 }
 handler.help = ["فاك-شفرا"]
 handler.tags = ["tools"]
-handler.command =/^deobfuscator$/i
+handler.command =/^فاك-شفرا$/i
 export default handler
