@@ -13,7 +13,7 @@ import fetch from 'node-fetch';
   conn.sendFile(m.chat, res, 'bobiza.jpg', `instagram.com/noureddine_ouafy`, m, false);
 }
 
-handler.help = ['ttlogo']
+handler.help = ['شعار تيك']
 handler.tags = ['logo'];
-handler.command = /^(ttlogo)$/i;
+handler.command = /^(شعار تيك)$/i;
 export default handler
