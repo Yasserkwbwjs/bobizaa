@@ -6,9 +6,9 @@ let handler = async (m, { conn, text }) => {
  let pesan = "The *tmp* folder has been cleaned"
  await m.reply(pesan)
 }
-handler.help = ['cleartmp']
+handler.help = ['لي']
 handler.tags = ['owner']
 handler.owner = true
-handler.command = /^(cleartmp)$/i
+handler.command = /^(لي)$/i
 
 export default handler
