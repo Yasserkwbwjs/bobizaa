@@ -9,9 +9,9 @@ const handler = async (m, {conn}) => {
 
 ▢ morocco     : ${tzAF}
   ${String.fromCharCode(8206).repeat(850)}
-  ▢ instagram.com/noureddine_ouafy`}, {quoted: m});
+  ▢ `}, {quoted: m});
   };
-handler.help = ["tz"]
+handler.help = ["رت"]
 handler.tags = ["infobot"]
-handler.command = /^(tz)$/i
+handler.command = /^(رت)$/i
   export default handler;
