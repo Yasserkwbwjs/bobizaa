@@ -40,9 +40,9 @@ let handler = async (m, {
         }
     }
 }
-handler.help = ["alloschool"]
+handler.help = ["فرض"]
 handler.tags = ["morocco"]
-handler.command = /^alloschool|alloschoolget$/i
+handler.command = /^فرض|alloschoolget$/i
 export default handler
 
 /* New Line */
