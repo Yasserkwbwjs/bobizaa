@@ -4,7 +4,7 @@ let handler = async (m) => {
 }
 handler.help = ['سلام عليكم']
 handler.tags = ['owner']
-handler.command = /سلام عليكم$/i
+handler.command = /^سلام عليكم$/i
 handler.owner = true
 
 export default handler
