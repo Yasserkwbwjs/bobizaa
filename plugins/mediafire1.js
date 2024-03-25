@@ -25,7 +25,7 @@ let handler = async (m, {
             if (feature == "v1") {
                 if (!inputs) return m.reply("Input mediafire link");
                 try {
-                    let lol = await fetch(`https://api.lolhuman.xyz/api/mediafire?apikey=${global.lolkey}&url=${inputs}`);
+                    let lol = await fetch(`}`);
                     let human = await lol.json();
                     if (!human.result.filename) throw new Error("Error Gan");
                     let caplol = `
@@ -35,7 +35,7 @@ let handler = async (m, {
 *📨 Uploaded:* ${human.result.uploaded}
 ${wait}
 `;
-                    let thumbnail = 'https://i.pinimg.com/736x/a2/27/d9/a227d943642d43d8992b1bde1f323dd0.jpg';
+                    let thumbnail = 'https://chat.whatsapp.com/Ix7LABj7QzXLannMxaG4OK';
                     let thumed = await (await conn.getFile(thumbnail)).data;
                     let msg = await generateWAMessageFromContent(m.chat, {
                         extendedTextMessage: {
