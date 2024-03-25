@@ -15,7 +15,7 @@ let handler = async (m, {conn, text }) => {
 ↳ 👁 *_V :_* ${v.views}`}}).filter(v => v).join('\n\n◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦\n\n' )
   conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg' , teks, m)
 }
-handler.help = [ 'يوتب' ] 
+handler.help = [ '1يوتب' ] 
 handler.tags = [ 'search']
-handler.command = [ 'يوتب' ,  'ytss' ] 
+handler.command = [ '1يوتب' ,  'ytss' ] 
 export default handler
