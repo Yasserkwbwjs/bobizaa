@@ -31,7 +31,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   }
 }
 
-handler.help = ['classroom-ote']
+handler.help = ['صور_انمي']
 handler.tags = ['anime']
-handler.command = /^classroom-ote$/i
+handler.command = /^صور_انمي$/i
 export default handler
