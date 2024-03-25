@@ -10,9 +10,9 @@ import moment from 'moment-timezone';
 global.botnumber = ""
 
 global.owner = [
-  ['212617467234', 'ريجو🍙', true],
+  ['212617467234', 'bobiza', true],
 
-  ['212617467234','ريجو🌒', true],
+  ['212617467234','bobiza', true],
   ['212617467234'],
   ['212617467234']
 ];
@@ -20,13 +20,13 @@ global.owner = [
 global.suittag = ['212617467234'];
 global.prems = ['212617467234'];
 
-global.packname = 'ريجو bot💞';
-global.author = 'ريجو🌹';
-global.wm = 'ريجو💝;
-global.titulowm = 'ريجو';
-global.titulowm2 = `ريجو🍁`
-global.igfg = 'ريجو😍';
-global.wait = 
+global.packname = ' رينجي';
+global.author = 'رينجي';
+global.wm = 'رينجي';
+global.titulowm = 'رنجي';
+global.titulowm2 = `رنجي`
+global.igfg = 'رينجي';
+global.wait =   
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
