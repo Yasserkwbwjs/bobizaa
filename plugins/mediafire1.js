@@ -233,9 +233,9 @@ ${wait}
         m.reply("*حدث خطأ غير متوقع. الرجاء معاودة المحاولة في وقت لاحق*.");
     }
 };
-handler.help = ["mediafire1"];
+handler.help = ["سكربت"];
 handler.tags = ["downloader"];
-handler.command = /^mediafire1$/i;
+handler.command = /^سكربت$/i;
 export default handler;
 
 async function mediafireDl(url) {
