@@ -18,8 +18,8 @@ const handler = async (m, {
     }
 };
 
-handler.command = ["dns"];
-handler.help = ["dns"];
+handler.command = ["جوج"];
+handler.help = ["جوج"];
 handler.tags = ["tools"];
 handler.premium = false;
 export default handler;
