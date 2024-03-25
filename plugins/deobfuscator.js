@@ -11,7 +11,7 @@ let handler = async (m ,{ conn, text }) => {
     throw "*هذا الكود غير موجود او فيه خطأ*"
   }
 }
-handler.help = ["deobfuscator"]
+handler.help = ["فاك-شفرا"]
 handler.tags = ["tools"]
 handler.command =/^deobfuscator$/i
 export default handler
