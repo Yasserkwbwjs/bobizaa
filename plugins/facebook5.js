@@ -47,9 +47,9 @@ ${result.description}
     }
 };
 
-handler.help = ['facebook5']
+handler.help = ['فايس4']
 handler.tags = ['downloader']
-handler.command = /^(facebook5)$/i
+handler.command = /^(4فايس)$/i
 
 
 export default handler
