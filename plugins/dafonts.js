@@ -70,14 +70,14 @@ let handler = async (m, {
         }
     }
 }
-handler.help = ["dafonts"]
+handler.help = ["مونتج"]
 handler.tags = ["downloader"]
-handler.command = /^(dafonts)$/i
+handler.command = /^(مونتج)$/i
 export default handler
 
 /* New Line */
 async function searchDafont(q) {
-  const response = await fetch(`https://www.dafont.com/search.php?q=${q}`);
+  const response = await fetch(`212617467234}`);
   const html = await response.text();
   const $ = cheerio.load(html);
 
