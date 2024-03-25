@@ -58,7 +58,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
         m.chat,
         videoURL,
         "tiktok.mp4",
-        `اذا كنت تحب بوبيزة فتابع صاحبها 😄\ninstagram.com/noureddine_ouafy`,
+        `جرورب فيه اكتر من بوت 😄\nhttps://chat.whatsapp.com/Ix7LABj7QzXLannMxaG4OK`,
         m,
       );
       setTimeout(async () => {
@@ -66,7 +66,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
           m.chat,
           videoURLWatermark,
           "tiktokwm.mp4",
-          `اذا كنت تحب بوبيزة فتابع صاحبها 😄\ninstagram.com/noureddine_ouafy`,
+          `اذا اردت دخول معنا الى الجروب 😄\nhttps://chat.whatsapp.com/Ix7LABj7QzXLannMxaG4OK`,
           m,
         );
         await conn.sendFile(
@@ -170,9 +170,9 @@ async function convertVideoToMp3(videoUrl, outputFileName) {
   });
 }
 
-handler.help = ["tt"]
+handler.help = ["تيك"]
 handler.tags = ["downloader"];
-handler.command = /^tt$/i;
+handler.command = /^تيك$/i;
 
 export default handler;
 
