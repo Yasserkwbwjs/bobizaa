@@ -11,9 +11,9 @@ let handler = async (m, { conn }) => {
   }).join`\n\n`
   m.reply(`Dashboard *${conn.user.name}*\n\n${txt}`)
 }
-handler.help = ['dashboard']
+handler.help = ['ملف1']
 handler.tags = ['infobot']
-handler.command = /^dashboard$/i
+handler.command = /^ملف1$/i
 
 export default handler
 	
