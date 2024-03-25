@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { args, usedPrefix, command }) => {
 let msg = `*هذا الأمر يمكنك من الترجمة الفورية لكل اللغات* 
 _مثال اذا اردت الترجمة للعربية_ : 
-*.c* ar Hello`
+*.sc* ar Hello`
 if (!args || !args[0]) return m.reply(msg)  
 let lang = args[0]
 let text = args.slice(1).join(' ')
