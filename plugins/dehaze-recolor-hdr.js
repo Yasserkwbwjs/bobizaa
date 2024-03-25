@@ -23,7 +23,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 					error = true;
 				} finally {
 					if (error) {
-						m.reply("*فشلت العملية*😣");
+						m.reply("*فشلت العملية*🥲");
 					}
 					delete conn.enhancer[m.sender];
 				}
@@ -44,7 +44,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let error;
 				try {
 					const This = await processing(img, "recolor");
-					conn.sendFile(m.chat, This, "", " instagram.com/noureddine_ouafy ...", m);
+					conn.sendFile(m.chat, This, "", " ", m);
 				} catch (er) {
 					error = true;
 				} finally {
