@@ -24,11 +24,11 @@ const defaultMenu = {
   before: `❤️السلام عليكم 👋. 
 
 ┏━━ salam  *%name*
-👥 *Total user:* %totalreg 
-⏰ *Uptime:* %muptime  
+👥 *Diablo:* %Uchiha 
+⏰ *Uchiha :* %Nerigo  
 ┗━━━━━━━━━━⬣
 %readmore
-  ≡ *B O B I Z A | M E N U*
+  ≡ * N E R G o | M E N U*
 `.trimStart(),
   header: '┏━━⊜ *_%category_* ',
   body: '┃⋄ %cmd %isdiamond %isPremium',
@@ -136,9 +136,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 text: text,
 contextInfo: {
 externalAdReply: {
-title: 'نيزكو ♥',
+title: 'Please ♥',
 body: "👑Uchiha👑",
-thumbnailUrl: 'https://telegra.ph/file/a7ae1db7b723f51411839.jpg',
+thumbnailUrl: 'https://telegra.ph/file/45e55de9c2224bce20f4e.mp4',
 sourceUrl: 'https://www.instagram.com/yassir__anime?igsh=NGY3c2diM3Q4emw4',
 mediaType: 1,
 renderLargerThumbnail: true
