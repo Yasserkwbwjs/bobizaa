@@ -14,7 +14,7 @@ let handler = async (m, {
         throw eror
     }
 }
-handler.help = ["coffee"]
+handler.help = ["قهوة"]
 handler.tags = ["tools"]
-handler.command = /^(coffee)$/i
+handler.command = /^(قهوة)$/i
 export default handler
