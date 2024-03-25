@@ -24,7 +24,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 }
 
-handler.help = ['feature']
+handler.help = ['فور']
 handler.tags = ['infobot']
-handler.command = /^(feature|totalfitur)$/i
+handler.command = /^(فور|totalfitur)$/i
 export default handler
