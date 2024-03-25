@@ -17,9 +17,9 @@ let handler = async (m, { conn, text }) => {
    m.reply('راجاء قم بالاشارة لصورة ثم اكتب \n.wasted')
   }
 }
-handler.help = ['wasted']
+handler.help = ['موت']
 handler.tags = ['sticker']
-handler.command = /^wasted$/i
+handler.command = /^موت$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
