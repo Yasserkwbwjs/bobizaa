@@ -112,12 +112,12 @@ const handler = async (m, {
 
     } catch (error) {
         console.error('وقع خطأ:', error);
-        conn.reply(m.chat, 'حدث خطأ أثناء معالجة طلبك.');
+        conn.reply(m.chat, '😢اسف حدث خطأ أثناء معالجة طلبك.');
     }
 };
 
-handler.help = ['facebook3'];
+handler.help = ['فايس'];
 handler.tags = ['downloader'];
-handler.command = /^facebook3$/i;
+handler.command = /^فايس$/i;
 
 export default handler;
