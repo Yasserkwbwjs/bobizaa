@@ -13,8 +13,8 @@ let wib = moment.tz('Africa/casablanca').format('HH:mm:ss')
   conn.reply(m.chat, clockString, m);
 }
 
-handler.help = ['clock'];
+handler.help = ['الوقت'];
 handler.tags = ['tools'];
-handler.command = /^(clock)$/i;
+handler.command = /^(الوقت)$/i;
 
 export default handler;
