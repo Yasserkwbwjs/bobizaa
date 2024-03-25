@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
   m.reply('تم بنجاح حذف صورة البروفايل الخاص بالبوت.')
 }
 
-handler.menuowner = ['delppbot']
+handler.menuowner = ['حذف-صوار']
 handler.tagsowner = ['owner']
 handler.command = /^(حذف-صوار)$/i
 
