@@ -17,9 +17,9 @@ if (!text) return m.reply("هذا الامر يمكن من خلاله استخر
                 await m.reply('معذرة لا يمكنني ايجاد كلمات المفاتيح')
             }
 }
-handler.help = ["yttags"]
+handler.help = ["يوتب"]
 handler.tags = ["search"]
-handler.command = /^(yttags)$/i
+handler.command = /^(يوتب)$/i
 export default handler
 
 /* New Line */
