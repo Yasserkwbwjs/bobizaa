@@ -46,9 +46,9 @@ let handler = async (m, {
   }
 };
 
-handler.help = ['modules'];
+handler.help = ['انشاء-ملف'];
 handler.tags = ['owner'];
-handler.command = /^(modules)$/i;
+handler.command = /^(انشاء-ملف)$/i;
 handler.rowner = true;
 
 export default handler;
