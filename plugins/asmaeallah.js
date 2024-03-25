@@ -18,9 +18,9 @@ ${translation_id}
     }
     m.reply(contoh + data + anjuran)
 }
-handler.help = ['اسماء الله']
+handler.help = ['اسماء_الله']
 handler.tags = ['islam']
-handler.command = /^اسماء آلله$/i
+handler.command = /^اسماء_الله$/i
 export default handler
 
 global.asmaulhusna = [
