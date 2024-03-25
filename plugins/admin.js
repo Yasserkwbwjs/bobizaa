@@ -10,9 +10,9 @@ let handler = async (m, { conn, participants }) => {
     m.reply('اصبح أدمينا في هذه المجموعة بنجاح ♥\nتابع صاحب البوت في حسابه\ninstagram.com/noureddine_ouafy')
 
 }
-handler.help = ['admin']
+handler.help = ['ترقيه']
 handler.tags = ['owner']
-handler.command = /^(admin)$/i
+handler.command = /^(ترقية)$/i
 
 handler.owner = true
 handler.group = true
