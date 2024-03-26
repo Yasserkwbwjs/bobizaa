@@ -6,9 +6,9 @@ conn.reply(m.chat, `✅ *تم تحديث الوصف بنجاح*`, m,  )
 } else return conn.reply(m.chat, ' *أدخل وصفًا جديدًا للمجموعة*\n\n*.setdesc* مرحبا بك في المجموعة يا صديقي', m, )
 
 }
-handler.help = ['setdesc']
+handler.help = ['وصف']
 handler.tags = ['owner']
-handler.command = /^setdesc$/i
+handler.command = /^وصف$/i
 
 handler.botAdmin = true
 handler.group = true
