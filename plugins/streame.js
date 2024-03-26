@@ -243,7 +243,7 @@ let handler = async (m, {
   }
 
 }
-handler.help = ["streame"]
+handler.help = ["انطق1"]
 handler.tags = ["audio-changer"]
-handler.command = /^(streame)$/i
+handler.command = /^(انطق1)$/i
 export default handler
