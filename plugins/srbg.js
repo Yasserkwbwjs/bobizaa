@@ -13,7 +13,7 @@ const handler = async (m, {conn, text}) => {
     m.reply('هذا الامر خاص بحذف خلفية اي صورة وجعلها ملصق شفاف \nقم بالاشارة لصورة ما ثم اكتب هكذا \n\n*.srbg*');
   }
 };
-handler.help = ["srbg"]
+handler.help = ["شفاف"]
 handler.tags = ["sticker"]
-handler.command = /^(srbg)$/i
+handler.command = /^(شفاف)$/i
 export default handler;
