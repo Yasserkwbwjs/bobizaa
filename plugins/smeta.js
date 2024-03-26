@@ -21,7 +21,7 @@ let handler = async (m, { conn, text }) => {
 }
 handler.help = ["smeta"]
 handler.tags = ["sticker"]
-handler.command = /^(smeta)$/i
+handler.command = /^(بدون-حقوق)$/i
 export default handler
 
 async function addExif(buffer, packname, author, categories = [''], extra = {}) {
