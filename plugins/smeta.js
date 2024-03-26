@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
     let [packname, ...author] = text.split('|')
     author = (author || []).join('|')
     let mime = m.quoted.mimetype || ''
-    if (!/webp/.test(mime)) throw 'المرجو الاشارة للملصق!'
+    if (!/webp/.test(mime)) throw '🌒المرجو الاشارة للملصق!'
     let img = await m.quoted.download()
     if (!img) throw 'المرجو الاشارة للملصق!'
     stiker = await addExif(img, packname || '', author || '')
@@ -19,7 +19,7 @@ let handler = async (m, { conn, text }) => {
     else throw 'وقع خطأ'
   }
 }
-handler.help = ["smeta"]
+handler.help = ["بدون-حقوق"]
 handler.tags = ["sticker"]
 handler.command = /^(بدون-حقوق)$/i
 export default handler
