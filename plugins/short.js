@@ -189,9 +189,9 @@ let handler = async (m, { command, usedPrefix, conn, args }) => {
   }
 };
 
-handler.help = ["short"];
+handler.help = ["1اختصار"];
 handler.tags = ["tools"];
-handler.command = /^short?$/i;
+handler.command = /^1اختصار?$/i;
 
 export default handler;
 
