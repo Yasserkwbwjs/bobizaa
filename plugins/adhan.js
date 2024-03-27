@@ -14,9 +14,9 @@ if (!text) throw `مثال : \n ${usedPrefix + command} berkane`
             m.reply(eror)
         }
 }
-handler.help = ['الوقت']
+handler.help = ['']
 handler.tags = ['islam']
-handler.command = /^(الوقت)$/i
+handler.command = /^()$/i
 export default handler
 
 async function fetchPrayerTimes(q) {
