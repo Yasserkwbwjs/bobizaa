@@ -13,9 +13,9 @@ let handler = async (m, { conn, text }) => {
     m.reply(`Error`)
   }
 }
-handler.help = [' انشاء ']
+handler.help = [' *انشاء* ']
 handler.tags = ['owner']
-handler.command = /^انشاء$/
+handler.command = /^*انشاء*$/
 handler.owner = true
 handler.premium = false
 export default handler
