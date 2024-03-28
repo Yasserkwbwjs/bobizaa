@@ -73,9 +73,9 @@ ${Object.entries(item.download.apkTechnicalInfo)
         }
     }
 }
-handler.help = ["apkcafe"]
+handler.help = ["تطبيقات"]
 handler.tags = ["applications"]
-handler.command = /^(apkcafe)$/i
+handler.command = /^(تطبيقات)$/i
 handler.premium = false
 export default handler
 
@@ -134,7 +134,7 @@ async function getInfo(url) {
                 download
             };
 
-            appDetails.push(app);
+            appDetails.push(app); 
         }
     }).get();
 
