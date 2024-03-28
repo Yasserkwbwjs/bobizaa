@@ -70,7 +70,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let error;
 				try {
 					const This = await processing(img, "enhance");
-					conn.sendFile(m.chat, This, "", " instagram.com/noureddine_ouafy ...", m);
+					conn.sendFile(m.chat, This, "", " Ringo 💝 ...", m);
 				} catch (er) {
 					error = true;
 				} finally {
@@ -83,7 +83,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 			break;
 	}
 };
-handler.help = ["*جودة*","j","*hd*"];
+handler.help = ["*ج*","j","*hd*"];
 handler.tags = ["image-edit"];
 handler.command = ["جودة","l","hd"];
 export default handler;
