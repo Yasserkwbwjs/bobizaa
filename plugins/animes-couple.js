@@ -9,9 +9,9 @@ let handler = async (m, { conn }) => {
   let ciwi = await(await fetch(cita.cewe)).buffer()
   await conn.sendFile(m.chat, ciwi, '', '_ارسلها لصديقك♀️_\n ولا تنسى متابعتي هنا \ninstagram.com/noureddine_ouafy', m)
 }
-handler.help = ['ppcouple','تطقيم']
+handler.help = ['تطقيم','تطقيم']
 handler.tags = ['anime']
-handler.command = ['ppcouple','تطقيم'] 
+handler.command = ['تطقيم','تطقيم'] 
 
 
 export default handler
