@@ -7,8 +7,8 @@ const handler = async (m, usedPrefix, command) => {
   conn.sendFile(m.chat, a, "deidara.jpg", '', m);
 };
 
-handler.help = ["ديدارا"];
+handler.help = ["h"];
 handler.tags = ["anime"];
-handler.command = /^ديدارا$/i;
+handler.command = /^ni$/i;
 
 export default handler;
