@@ -22,7 +22,7 @@ let stiker = await sticker(false, res.url, global.packname, global.author)
 conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
 }}
 
-handler.help = ['دمج']
+handler.help = ['*دمج*']
 handler.tags = ['sticker']
 handler.command = ['دمج'] 
 
