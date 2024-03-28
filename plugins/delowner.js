@@ -11,7 +11,7 @@ let handler = async (m, { conn, text }) => {
         mentions: conn.parseMention(caption)
     });
 }
-handler.help = ['ازلة']
+handler.help = ['*ازلة*']
 handler.tags = ['owner']
 handler.command = /^ازلة$/i
 
