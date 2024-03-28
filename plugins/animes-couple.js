@@ -5,13 +5,13 @@ let handler = async (m, { conn }) => {
   let cita = data[Math.floor(Math.random() * data.length)]
   
   let cowi = await(await fetch(cita.cowo)).buffer()
-  await conn.sendFile(m.chat, cowi, '', '_أرسلها لصديقتك♂️
+  await conn.sendFile(m.chat, cowi, '', '_أرسلها لصديقتك♂️_',m)
   let ciwi = await(await fetch(cita.cewe)).buffer()
-  await conn.sendFile(m.chat, ciwi, '', '_ارسلها لصديقك♀️
+  await conn.sendFile(m.chat, ciwi, '', '_ارسلها لصديقك♀️_, m)
 }
-handler.help = ['تطقيم','طقم']
+handler.help = ['ppcouple','tofanime']
 handler.tags = ['anime']
-handler.command = ['تطقيم','طقم'] 
+handler.command = ['ppcouple','tofanime'] 
 
 
 export default handler
