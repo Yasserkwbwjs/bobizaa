@@ -5,9 +5,9 @@ let handler = async (m, { conn }) => {
   let cita = data[Math.floor(Math.random() * data.length)]
   
   let cowi = await(await fetch(cita.cowo)).buffer()
-  await conn.sendFile(m.chat, cowi, '', '_أرسلها لصديقتك♂️_ \n  🤗  \nhttps://chat.whatsapp.com/Ix7LABj7QzXLannMxaG4OK', m)
+  await conn.sendFile(m.chat, cowi, '', '_أرسلها لصديقتك♂️_ \n    \n', m)
   let ciwi = await(await fetch(cita.cewe)).buffer()
-  await conn.sendFile(m.chat, ciwi, '', '_ارسلها لصديقك♀️_\n   🤗  \https://chat.whatsapp.com/Ix7LABj7QzXLannMxaG4OK', m)
+  await conn.sendFile(m.chat, ciwi, '', '_ارسلها لصديقك♀️_\n     \', m)
 }
 handler.help = ['طقم','تطقيم']
 handler.tags = ['anime']
