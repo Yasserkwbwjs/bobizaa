@@ -4,9 +4,9 @@ let handler = async (m, { participants }) => {
     m.reply('تم حظرك من استعمال البوت يا عزيزي لانك تخالف سياسة استعماله ♥ يمكنك معرفة سياسة استخدام البوت لدى صاحبه اوتشيها ديابلو \212617467234 😄!')
     // } else m.reply('Ada nomor host disini...')
 }
-handler.help = ['باي']
+handler.help = ['بان']
 handler.tags = ['owner']
-handler.command = /^باي$/i
+handler.command = /^بان$/i
 
 handler.owner = true
 
