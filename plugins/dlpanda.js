@@ -38,10 +38,10 @@ const handler = async (m, {
     }
 };
 
-handler.help = ["تيك-توك"] 
+handler.help = ["*تيك توك*"] 
     
 handler.tags = ["downloader"];
-handler.command = /^(تيك-توك)$/i;
+handler.command = /^(تيك توك)$/i;
 export default handler;
 
 async function dlPanda(url) {
