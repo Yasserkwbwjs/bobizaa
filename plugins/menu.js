@@ -28,10 +28,10 @@ const defaultMenu = {
 🖤 *Uchiha :* %Nerigo  
 ┗━━━━━━━━━━⬣
 %readmore
-  ≡ *˙·٠•●۩۩ஜ♦🔰Uchiha Diablo🔰♦ஜ۩۩●•٠·˙*
+  ≡ *▫️U C H I H A|D I A B L O▪️*
 `.trimStart(),
   header: ' *_%category_* ',
-  body: '🍁|• %cmd %isdiamond %isPremium',
+  body: '🌷|•%cmd %isdiamond %isPremium',
   footer: '______\n',
   after: '*رقم صاحب البوت إدا واجهتك مشاكل 💞*\n+212617467234',
 }
