@@ -32,7 +32,7 @@ let handler = async (m, { conn, text }) => {
     }
 }
 
-handler.help = ['بوم']
+handler.help = ['*بوم*']
 handler.tags = ['tools']
 handler.command = /^(بوم)$/i
 
