@@ -8,9 +8,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     throw `واجهت خطأ في تغيير الاسم`
   }
 }
-handler.help = ['اسم-البوت']
+handler.help = ['*اسم*']
 handler.tags = ['owner']
-handler.command = /^(.اسم-البوت)$/i
+handler.command = /^(اسم)$/i
 
 handler.owner = true
 
