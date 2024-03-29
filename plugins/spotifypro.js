@@ -73,7 +73,7 @@ for (let i = 0; i < tracks.length; i++) {
           spotifyi += `	◦  *المدة:* ${searchTrack.duration}\n`
           spotifyi += `	◦  *الالبوم:* ${searchTrack.album.name}\n`                 
           spotifyi += `	◦  *تاريخه:* ${searchTrack.album.releasedDate}\n\n`   
-          spotifyi += `*جاري ارسال المقطعR I N G O* ♥\n\ R I N G O🌷`
+          spotifyi += `*جاري ارسال المقطع* ♥\n\ R I N G O🌷`
         await conn.sendMessage(m.chat, {text: spotifyi.trim(), contextInfo: {forwardingScore: 9999999, isForwarded: true, "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.titulowm2, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "thumbnailUrl": img, "mediaUrl": searchTrack.url, "sourceUrl": searchTrack.url}}}, {quoted: m});
         await conn.sendMessage(m.chat, {audio: dlspoty, fileName: `${searchTrack.title}.mp3`, mimetype: 'audio/mpeg'}, {quoted: m});
 }  
