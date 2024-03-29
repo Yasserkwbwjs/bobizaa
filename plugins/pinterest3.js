@@ -5,7 +5,7 @@ import cheerio from 'cheerio'
 
 let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!text) throw `*يمكنك تحميل صور داك جودة عالية وممتازة من منصة pinterest عبر كتابة الامر متبوعا باسم الصورة التي تريد تحميلها مثال*\n\n*${usedPrefix + command} صورة الكون*`
-  conn.reply(m.chat, '*انتظر قليلا يا عزيزي ...*', m)
+  conn.reply(m.chat, '*انتظر قليلا يا عزيزي🌷*', m)
 
   try {
     const hasil = await pinterest(text);
@@ -35,7 +35,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   }
 }
 
-handler.help = ['صور']
+handler.help = ['*صور*']
 handler.tags = ['downloader']
 handler.command = /^صور$/i
 
