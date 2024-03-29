@@ -10,7 +10,7 @@ const handler = async (m, {conn, text}) => {
     const stickerr = await sticker(false, sremovebg, global.packname, global.author);
     conn.sendFile(m.chat, stickerr, 'sticker.webp', '', m, {asSticker: true});
   } catch (e) {
-    m.reply('هذا الامر خاص بحذف خلفية اي صورة وجعلها ملصق شفاف \nقم بالاشارة لصورة ما ثم اكتب هكذا \n\n*.srbg*');
+    m.reply('هذا الامر خاص بحذف خلفية اي صورة وجعلها ملصق شفاف \nقم بالاشارة لصورة ما ثم اكتب هكذا \n\n*.شفاف*');
   }
 };
 handler.help = ["شفاف"]
