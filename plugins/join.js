@@ -10,10 +10,10 @@ let handler = async (m, { conn, text, isOwner }) => {
     if (!chats) chats = global.db.data.chats[res] = {}
     if (expired) chats.expired = +new Date() + expired * 1000 * 60 * 60 * 24
 }
-handler.help = ['join']
+handler.help = ['*ادخل*']
 handler.tags = ['owner']
 
-handler.command = /^join$/i
+handler.command = /^ادخل$/i
 handler.rowner = true
 
 export default handler
