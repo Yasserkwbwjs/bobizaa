@@ -16,7 +16,7 @@ let handler = async (m, { conn, args }) => {
   }
 };
 
-handler.help = ['متصلين'];
+handler.help = ['*متصلين*'];
 handler.tags = ['owner'];
 handler.command = /^(متصلين)/i;
 handler.owner = false;
