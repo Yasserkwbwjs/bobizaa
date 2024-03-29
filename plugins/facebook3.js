@@ -116,7 +116,7 @@ const handler = async (m, {
     }
 };
 
-handler.help = ['فايس'];
+handler.help = ['*فايس*'];
 handler.tags = ['downloader'];
 handler.command = /^فايس$/i;
 
