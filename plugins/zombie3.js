@@ -1,29 +1,23 @@
-const {
-  proto,
-  generateWAMessage,
-  areJidsSameUser,
-} = (await import('@whiskeysockets/baileys')).default;
-
-export async function all(m, chatUpdate) {
-  if (m.isBaileys) return;
-  if (!m.message) return;
-  if (!m.msg.fileSha256) return;
-  if (!(Buffer.from(m.msg.fileSha256).toString('base64') in global.db.data.sticker)) return;
-
-  const hash = global.db.data.sticker[Buffer.from(m.msg.fileSha256).toString('base64')];
-  const {text, mentionedJid} = hash;
-  const messages = await generateWAMessage(m.chat, {text: text, mentions: mentionedJid}, {
-    userJid: this.user.id,
-    quoted: m.quoted && m.quoted.fakeObj,
-  });
-  messages.key.fromMe = areJidsSameUser(m.sender, this.user.id);
-  messages.key.id = m.key.id;
-  messages.pushName = m.pushName;
-  if (m.isGroup) messages.participant = m.sender;
-  const msg = {
-    ...chatUpdate,
-    messages: [proto.WebMessageInfo.fromObject(messages)],
-    type: 'append',
-  };
-  this.ev.emit('messages.upsert', msg);
+export async function before(m, {match}) {
+  if (!m.chat.endsWith('@s.whatsapp.net')) {
+    return !0;
+  }
+  this.anonymous = this.anonymous ? this.anonymous : {};
+  const room = Object.values(this.anonymous).find((room) => [room?.a, room?.b].includes(m.sender) && room?.state === 'CHATTING');
+  if (room) {
+    if (/^(next|leave|start)/.test(m.text)) {
+      const other = [room?.a, room?.b].find((user) => user !== m.sender);
+      if (other) {
+        await m.copyNForward(other, true);
+      } else {
+        conn.sendMessage(m.chat, {text: `*[❗] No estás en un chat, por favor espera a estar en uno.*`}, {quoted: m});
+      }
+    }
+  } else {
+    if (!/^(next|leave|start)/.test(m.text)) {
+      return;
+    }
+    conn.sendMessage(m.chat, {text: `*[❗] No estás en un chat, por favor espera a estar en uno.*`}, {quoted: m});
+  }
+  return !0;
 }
