@@ -5,7 +5,7 @@ import { pinterest } from '../lib/scrape.js'
 
 let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!text) throw `*تحميل الصور من pinterest* سوف يرسل لك اكثر من 5 صور ذاك جودة عالية\n\n*مثال:*\n*${usedPrefix + command} boy*`
-  conn.reply(m.chat, ' *نتظر قليلا*🌸', m)
+  conn.reply(m.chat, ' *انتظر قليلا*🌸', m)
 
   try {
     const hasil = await pinterest(text);
