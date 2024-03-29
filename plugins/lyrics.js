@@ -20,7 +20,7 @@ ${result.lyrics}
     }
 }
 
-handler.help = ['اغنيه']
+handler.help = ['*اغنيه*']
 handler.tags = ['tools']
 handler.command = /^(اغنيه)$/i
 
