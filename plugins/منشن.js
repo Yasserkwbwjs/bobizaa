@@ -11,9 +11,9 @@ teks += `*تفاعل ↫* @${mem.id.split('@')[0]}\n`}
 teks += `*Nezuko-BOT*\n\n*JOHAN&kaneki*`
 conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, )
 }
-handler.help = ['tagall <mesaje>','invocar <mesaje>']
+handler.help = ['*منشن*']
 handler.tags = ['group']
-handler.command = /^(منشن|invocar|invocacion|todos|invocación)$/i
+handler.command = /^(منشن)$/i
 handler.admin = true
 handler.group = true
 export default handler
