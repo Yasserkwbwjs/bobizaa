@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
 │🍁 أتمنى أنك بخير ♥ رينجو أون لاين الآن 
 يمكنوك اعطائي اي امر 
 ╰────────────────────
-*─[ BY NOUREDDINE_OUAFY ]*🌟✨
+*🌟[ 🌹R I N G O🌹 ]*🌟
 `.trim()
   m.reply(caption)
 }
