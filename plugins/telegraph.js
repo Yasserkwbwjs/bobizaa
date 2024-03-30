@@ -11,10 +11,10 @@ let handler = async (m) => {
   m.reply(`▢ ${media.length} Byte(s) 
 
 ▢ ${isTele ? '' : '(Unknown)'} 
-▢ *هذا هو رابط الصورة:* ${link}\n\n\nتابع صاحب البوت في حسابه\ninstagram.com/noureddine_ouafy
+▢ *🌹هذا هو رابط الصورة:* ${link}\n\n\n    \
   `)
 }
-handler.help = ['tourl']
+handler.help = ['*تليجراف*']
 handler.tags = ['uploader']
-handler.command = ['telegraph', 'tourl','dir']
+handler.command = ['تليجراف']
 export default handler;
