@@ -29,9 +29,9 @@ let handler = async (m, {
         throw eror
     }
 }
-handler.help = ["شعار"]
+handler.help = ["*2الوغو*"]
 handler.tags = ["logo"]
-handler.command = /^شعار$/i
+handler.command = /^2الوغو$/i
 
 export default handler
 
