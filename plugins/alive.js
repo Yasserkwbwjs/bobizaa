@@ -10,8 +10,7 @@ let handler = async (m, { conn }) => {
 `.trim()
   m.reply(caption)
 }
-handler.help = ['رينجو']
-handler.tags = ['infobot']
+
 handler.command = /^(رينجو)$/i
 
 
