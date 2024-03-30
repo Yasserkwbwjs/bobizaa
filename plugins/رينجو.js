@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
   let caption = `
 ╭────────────────────
 │يا قلبي  , ${conn.getName(m.sender)}!
-│❤️أتمنى أنك  
+│🌷 اتمنى أنك بخير 
 │ 
 ╰────────────────────
 *🌟[ 🌹R I N G O🌹 ]*🌟
