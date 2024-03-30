@@ -10,7 +10,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     users[who].banned = false
     conn.reply(m.chat, `
 تم الغاء البان !
-@${who.split`@`[0]} has been unbanned`, m, { mentions: [who] })
+@${who.split`@`[0]} *🏵️ قوم بي شكرا صاحب لبوت* `, m, { mentions: [who] })
 }
 handler.help = ['unban @user']
 handler.tags = ['owner']
