@@ -11,7 +11,8 @@ let handler = async (m) => {
   m.reply(`▢ ${media.length} Byte(s) 
 
 ▢ ${isTele ? '' : '(Unknown)'} 
-▢ *🌹هذا هو رابط الصورة:*
+▢ *🌹هذا هو رابط الصورة:* ${link}\n\n`)
+}
 handler.help = ['*تليجراف*']
 handler.tags = ['uploader']
 handler.command = ['تليجراف']
