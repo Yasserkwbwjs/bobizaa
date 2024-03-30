@@ -10,17 +10,17 @@ let handler = async (m, {
 }) => {
 
     let lister = [
-        "s",
-        "d"
+        "ا",
+        "ب"
     ]
 
     let [feature, inputs, inputs_, inputs__, inputs___] = text.split("+")
-    if (!lister.includes(feature)) return m.reply("هذا الامر خاص بتحميل التطبيقات من موقع \n https://uapk.pro\nيمكنك تحميل التطبيقات من هذا الامر من خلال كتابة \n*.uapkpro s+facebook*\n\بعد ان تحصل على رابط التطبيق تعود للبوت وتكتب له هذا الامر لتحميله\n*.uapkpro d+*(رابط التطبيق) \n\n\n*Pilih type yg ada*\n" + lister.map((v, index) => "  ○ " + v).join("\n"))
+    if (!lister.includes(feature)) return m.reply("هذا الامر خاص بتحميل التطبيقات من موقع \n https://uapk.pro\nيمكنك تحميل التطبيقات من هذا الامر من خلال كتابة \n*.uapkpro ا+facebook*\n\بعد ان تحصل على رابط التطبيق تعود للبوت وتكتب له هذا الامر لتحميله\n*.uapkpro ب+*(رابط التطبيق) \n\n\n*Pilih type yg ada*\n" + lister.map((v, index) => "  ○ " + v).join("\n"))
 
     if (lister.includes(feature)) {
 
-        if (feature == "s") {
-            if (!inputs) return m.reply("مثال:\n.uapkpro s+lite")
+        if (feature == "ا") {
+            if (!inputs) return m.reply("مثال:\n.uapkpro ا+lite")
             await m.reply(wait)
             try {
                 let res = await searchUapkpro(inputs)
@@ -57,9 +57,9 @@ let handler = async (m, {
         }
     }
 }
-handler.help = ["تطبيقات"]
+handler.help = ["*أبيك*"]
 handler.tags = ["applications"]
-handler.command = /^(تطبيقات)$/i
+handler.command = /^(أبيك)$/i
 handler.premium = false
 export default handler
 
@@ -94,7 +94,7 @@ async function getUapkpro(url) {
 
   const supportedAndroid = $('p strong').text();
   const title = $('h1').text();
-  const downloadLink = $('p a').attr('href');
+  const downloadLink = $('ب ا').attr('href');
 
   const obj = {
     supportedAndroid,
