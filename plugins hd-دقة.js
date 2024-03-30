@@ -3,7 +3,7 @@ import Jimp from "jimp";
 
 let handler = async (m, { conn, usedPrefix, command }) => {
 	switch (command) {
-		case "dehaze":
+		case "دقة":
 			{
 				conn.enhancer = conn.enhancer ? conn.enhancer : {};
 				let q = m.quoted ? m.quoted : m;
@@ -29,7 +29,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				}
 			}
 			break;
-		case "دقت-لون":
+		case "":
 			{
 				conn.recolor = conn.recolor ? conn.recolor : {};
 				let q = m.quoted ? m.quoted : m;
@@ -70,7 +70,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let error;
 				try {
 					const This = await processing(img, "enhance");
-					conn.sendFile(m.chat, This, "", " ꧁★𝙐𝒄𝒉𝒊𝒉𝒂 𝘿𝒊𝒂𝒃𝒍𝒐★꧂", m);
+					conn.sendFile(m.chat, This, "", " Ringo 💝 ...", m);
 				} catch (er) {
 					error = true;
 				} finally {
@@ -83,14 +83,14 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 			break;
 	}
 };
-handler.help = ["*دقت-لون*","بدون-لون","*hd*"];
+handler.help = ["*دقة*","","*hd*"];
 handler.tags = ["image-edit"];
-handler.command = ["دقت-لون","بدون-لون","hd"];
+handler.command = ["دقة","","hd"];
 export default handler;
 
 async function processing(urlPath, method) {
 	return new Promise(async (resolve, reject) => {
-		let Methods = ["enhance", "بدون-لون", "دقت-لون"];
+		let Methods = ["enhance", "recolor", "dehaze"];
 		Methods.includes(method) ? (method = method) : (method = Methods[0]);
 		let buffer,
 			Form = new FormData(),
