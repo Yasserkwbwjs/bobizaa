@@ -504,9 +504,9 @@ let handler = async (m, {
     }
 
 }
-handler.help = ["mic"]
+handler.help = ["*انطق*"]
 handler.tags = ["audio-changer"]
-handler.command = /^(mic)$/i
+handler.command = /^(انطق)$/i
 export default handler
 
 function getParts(array, index) {
