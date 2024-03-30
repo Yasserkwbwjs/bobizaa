@@ -21,7 +21,7 @@
 
      // Send PNG image
      if (decodedBuffer.length > 0) {
-       await conn.sendFile(m.chat, decodedBuffer, 'out.png', 'instagram.com/noureddine_ouafy', m);
+       await conn.sendFile(m.chat, decodedBuffer, 'out.png', '*R i n g o🍒*', m);
      } else {
        throw 'فشل تحويل الملصق إلى صورة.';
      }
@@ -35,9 +35,9 @@
    }
  };
 
- handler.help = ['toimage']
+ handler.help = ['لصورة']
  handler.tags = ['sticker']
- handler.command = ['toimage']
+ handler.command = ['لصورة']
 
  
 
