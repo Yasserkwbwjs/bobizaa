@@ -29,7 +29,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				}
 			}
 			break;
-		case "recolor":
+		case "دقت-لون":
 			{
 				conn.recolor = conn.recolor ? conn.recolor : {};
 				let q = m.quoted ? m.quoted : m;
@@ -70,7 +70,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let error;
 				try {
 					const This = await processing(img, "enhance");
-					conn.sendFile(m.chat, This, "", " Ringo 💝 ...", m);
+					conn.sendFile(m.chat, This, "", " ꧁★𝙐𝒄𝒉𝒊𝒉𝒂 𝘿𝒊𝒂𝒃𝒍𝒐★꧂", m);
 				} catch (er) {
 					error = true;
 				} finally {
@@ -83,14 +83,14 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 			break;
 	}
 };
-handler.help = ["*ج*","j","*hd*"];
+handler.help = ["*دقت-لون*","بدون-لون","*hd*"];
 handler.tags = ["image-edit"];
-handler.command = ["جودة","l","hd"];
+handler.command = ["دقت-لون","بدون-لون","hd"];
 export default handler;
 
 async function processing(urlPath, method) {
 	return new Promise(async (resolve, reject) => {
-		let Methods = ["enhance", "recolor", "dehaze"];
+		let Methods = ["enhance", "بدون-لون", "دقت-لون"];
 		Methods.includes(method) ? (method = method) : (method = Methods[0]);
 		let buffer,
 			Form = new FormData(),
