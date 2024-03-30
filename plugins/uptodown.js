@@ -15,7 +15,7 @@ let handler = async (m, {
     ]
 
     let [feature, inputs, inputs_, inputs__, inputs___] = text.split("+")
-    if (!lister.includes(feature)) return m.reply("\nهذا الامر خاص بتحميل التطبيقات والالعاب    من موقع \n https://id.uptodown.com/\nيمكنك تحميل برامج التطبيقات من هذا الامر من خلال كتابة \n*.uptodown s+facebook lite*\n\nبعد ان تحصل على رابط التطبيق تعود للبوت وتكتب له هذا الامر لتحميله\n*.uptodown d+*(رابط التطبيق)*\n\n" + lister.map((v, index) => "  ○ " + v).join("\n"))
+    if (!lister.includes(feature)) return m.reply("\nهذا الامر خاص بتحميل التطبيقات والالعاب    من موقع \n https://id.uptodown.com/\nيمكنك تحميل برامج التطبيقات من هذا الامر من خلال كتابة \n*.ap s+اسم lite*\n\nبعد ان تحصل على رابط التطبيق تعود للبوت وتكتب له هذا الامر لتحميله\n*.ap d+*(رابط التطبيق)*\n\n" + lister.map((v, index) => "  ○ " + v).join("\n"))
 
     if (lister.includes(feature)) {
 
@@ -70,9 +70,9 @@ ${wait}`
         }
     }
 }
-handler.help = ["uptodown"]
+handler.help = ["*أبيك*"]
 handler.tags = ["applications"]
-handler.command = /^(uptodown)$/i
+handler.command = /^(أبيك)$/i
 export default handler
 
 /* New Line */
