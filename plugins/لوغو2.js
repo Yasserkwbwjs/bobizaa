@@ -12,8 +12,8 @@ const handler = async (m, { conn, args, text, command, usedPrefix, isCreator, is
   let res = `[0]}`;
   conn.sendFile(m.chat, res, 'idulfitri.jpg', 'instagram.com/noureddine_ouafy', m, false);
 };
-handler.help = ['تهنئه'];
+handler.help = ['*لوغو2*'];
 handler.tags = ['logo'];
-handler.command = /^(تهنئه)$/i;
+handler.command = /^(لوغو2)$/i;
 
 export default handler;
