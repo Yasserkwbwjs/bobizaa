@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
   if (!args[0]) throw 'يمكنك صناعة شعار مثال :\n\n*.الوغو* Uchiha|Away';
   conn.sendMessage(m.chat, {
     react: {
-      text: '🕒',
+      text: '💝',
       key: m.key,
     }
   });
