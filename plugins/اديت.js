@@ -3,7 +3,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     await conn.sendMessage(m.chat, { video: { url: dir[Math.floor(Math.random() * dir.length)] }, caption: `R I N G O 🌹` }, { quoted: m })
 }
 
-handler.help = ['اديت']
+handler.help = ['*اديت*']
 handler.tags = ['anime']
 handler.command = /^اديت$/i
 export default handler
