@@ -35,7 +35,7 @@
    }
  };
 
- handler.help = ['لصورة']
+ handler.help = ['*لصورة*']
  handler.tags = ['sticker']
  handler.command = ['لصورة']
 
