@@ -19,7 +19,7 @@ let handler = async (m, { conn, text }) => {
     else throw 'وقع خطأ'
   }
 }
-handler.help = ["بدون-حقوق"]
+handler.help = ["*بدون-حقوق*"]
 handler.tags = ["sticker"]
 handler.command = /^(بدون-حقوق)$/i
 export default handler
