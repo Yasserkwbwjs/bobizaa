@@ -156,9 +156,9 @@ renderLargerThumbnail: true
     throw e
   }
 }
-handler.help = ['*اومر*']
+handler.help = ['*ÿasser*']
 handler.tags = ['infobot']
-handler.command = ['اومر'] 
+handler.command = ['ÿasser'] 
 handler.register = false
 
 
