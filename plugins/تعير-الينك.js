@@ -10,9 +10,9 @@ let handler = async (m, { conn }) => {
     m.reply(s)
 
 }
-handler.help = ['*تغير-ربط*']
+handler.help = ['*تغير-الينك*']
 handler.tags = ['owner']
-handler.command = /^تغير-ربط$/i
+handler.command = /^تغير-الينك$/i
 
 handler.group = true
 handler.admin = true
