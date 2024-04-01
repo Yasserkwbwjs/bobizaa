@@ -4,9 +4,9 @@ if (!text) return conn.reply(m.chat, 'هذا الأمر خاص بتغيير إس
 await conn.groupUpdateSubject(m.chat, text)
 conn.reply(m.chat, `🚩 ${text ? `${text} *هو الاسم الجديد لهذه المجموعة*\n` : '*لم يعطوا اسما*'}`, m,  )
 }
-handler.help = ['*اسم-الجروب*']
+handler.help = ['*اسم-الاسم*']
 handler.tags = ['owner']
-handler.command = /^اسم-الجروب$/i
+handler.command = /^اسم-الاسم$/i
 
 handler.botAdmin = true
 handler.group = true
