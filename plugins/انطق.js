@@ -7,7 +7,7 @@ let handler = async (m, {
     args
 }) => {
     let ListVoice = [
-        "af-ZA-AdriNeural",
+        "انطق 23 | مرحبا بيك",
         "af-ZA-WillemNeural",
         "am-ET-AmehaNeural",
         "am-ET-MekdesNeural",
@@ -472,7 +472,7 @@ let handler = async (m, {
     let lister = ListVoiceArray(ListVoice)
     let readMore = String.fromCharCode(8206).repeat(4001);
 
-    let query = `مثال :\n.mic 21| مَرْحَبًا انا أُدْعى بُوبِيزَا بوت أَوَّلْ بُوتْ وَاتْسَابْ في المغرب وفي الوطن العربي\n\n*لائحة المعلقين حسب الترقيم*\n\nتابعني في الانستغرام\ninstagram.com/noureddine_ouafy\n\n\n` + readMore + lister.map((v, index) => "  " + (index + 1) + ". " + v).join("\n");
+    let query = `مثال :\n.mic 21| مَرْحَبًا انا أُدْعى بُوبِيزَا بوت أَوَّلْ بُوتْ وَاتْسَابْ في المغرب وفي الوطن العربي\n\n*لائحة المعلقين حسب الترقيم*\n\ ⚕️ \༄✿𝑹 𝑰 𝑵 𝑮 𝑶࿐\n\n\n` + readMore + lister.map((v, index) => "  " + (index + 1) + ". " + v).join("\n");
     
     let text
     if (args.length >= 1) {
