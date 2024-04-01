@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
   await conn.sendMessage(m.chat, {
    react: {
- text: "🖤",
+ text: "😂",
  key: m.key,
    }
   })
@@ -9,9 +9,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   await conn.sendMessage(m.chat, { video: { url: dir[Math.floor(Math.random() * dir.length)] }, caption: global.veeeee }, { quoted: m })
 }
 
-handler.help = ['شادو']
+handler.help = ['ميمز']
 handler.tags = ['anime']
-handler.command = /^(شادو)$/i
+handler.command = /^(ميمز)$/i
 handler.limit = false
 
 export default handler
