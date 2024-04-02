@@ -9,8 +9,7 @@ import { join } from 'path'
 const time = moment.tz('Egypt').format('HH')
 let wib = moment.tz('Egypt').format('HH:mm:ss')
 //import db from '../lib/database.js'
-let handler = async (m, { conn, usedPrefix, command }) => {
-  
+
 let handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
     let d = new Date(new Date + 3600000)
     let locale = 'ar'
