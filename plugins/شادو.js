@@ -17,7 +17,7 @@ handler.limit = false
 export default handler
 
 const dir = [
-'https://telegra.ph/file/5fb7c13a4d93917f97ff3.mp4',
+'https://telegra.ph/file/6d903f989707de79e567b.mp4',
 'https://telegra.ph/file/22ecc343f08752befd263.mp4',
 'https://telegra.ph/file/ceccbf7b0430ea3e540df.mp4',
 'https://telegra.ph/file/c41394beb1d1dc75c21b2.mp4',
