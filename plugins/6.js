@@ -57,7 +57,7 @@ conn.sendMessage(m.chat, {
 }; 
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['3'] 
+handler.command = ['6'] 
 
 export default handler
 function clockString(ms) {
