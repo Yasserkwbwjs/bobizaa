@@ -22,9 +22,9 @@ conn.sendFile(m.chat, ss, 'error.png', teks, m)
 //m.reply(teks)
 })
 } 
-handler.help = ['google', 'googlef'].map((v) => v + ' <pencarian>');
+handler.help = ['جوجل', 'googlef'].map((v) => v + ' <pencarian>');
 handler.tags = ['internet'];
-handler.command = /^googlef?$/i;
+handler.command = /^جوجل?$/i;
 export default handler;
 
 /*import {googleIt} from '@bochilteam/scraper';
