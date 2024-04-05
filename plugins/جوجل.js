@@ -1,66 +1,28 @@
-import {googleIt} from '@bochilteam/scraper';
-import google from 'google-it';
-import axios from 'axios';
+import yts from 'yt-search';
+import fs from 'fs';
 import _translate from "./_translate.js"
-const tradutor = _translate.plugins.buscador_google
- // Para configurar o idioma, na raiz do projeto altere o arquivo config.json
-  // Para configurar el idioma, en la raíz del proyecto, modifique el archivo config.json.
-  // To set the language, in the root of the project, modify the config.json file.
+const tradutor = _translate.plugins.buscador_yts
+// Para configurar o idioma, na raiz do projeto altere o arquivo config.json
+// Para configurar el idioma, en la raíz del proyecto, modifique el archivo config.json.
+// To set the language, in the root of the project, modify the config.json file.
 
-let handler = async (m, { conn, command, args, usedPrefix }) => {
-  const fetch = (await import('node-fetch')).default;
-  const text = args.join` `;
-  if (!text) return conn.reply(m.chat, `${tradutor.texto1}`, m);
-const url = 'https://google.com/search?q=' + encodeURIComponent(text);
-google({'query': text}).then(res => {
-let teks = `*${tradutor.texto2} _${text}_*\n\n${url}\n\n`
-for (let g of res) {
-teks += `_*${g.title}*_\n_${g.link}_\n_${g.snippet}_\n\n`
-} 
-const ss = `https://image.thum.io/get/fullpage/${url}`
-conn.sendFile(m.chat, ss, 'error.png', teks, m)
-//m.reply(teks)
-})
-} 
-handler.help = ['جوجل', 'googlef'].map((v) => v + ' <pencarian>');
-handler.tags = ['internet'];
-handler.command = /^جوجل?$/i;
-export default handler;
-
-/*import {googleIt} from '@bochilteam/scraper';
-import axios from 'axios';
-const handler = async (m, {conn, command, args}) => {
-  const fetch = (await import('node-fetch')).default;
-  const text = args.join` `;
-  if (!text) return conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝚃𝙴𝚇𝚃𝙾 𝙾 𝚃𝙴𝙼𝙰 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙴 𝙱𝚄𝚂𝙲𝙰𝚁*', m);
-  const url = 'https://google.com/search?q=' + encodeURIComponent(text);
-  const search = await googleIt(text);
-  const msg = search.articles.map(({title, url, description}) => {
-    return `*${title}*\n_${url}_\n_${description}_`;
-  }).join('\n\n');
-  try {
-    const ss = `https://image.thum.io/get/fullpage/${url}`;
-    await conn.sendFile(m.chat, ss, 'error.png', url + '\n\n' + msg, m);
-  } catch {
-    m.reply(msg);
-  }
+const handler = async (m, {conn, text}) => {
+  if (!text) throw `⚠️ *${tradutor.texto1}*`;
+  const results = await yts(text);
+  const tes = results.all;
+  const teks = results.all.map((v) => {
+    switch (v.type) {
+      case 'video': return `
+° *_${v.title}_*
+↳ 🫐 *_${tradutor.texto2[0]}_* ${v.url}
+↳ 🕒 *_${tradutor.texto2[1]}_* ${v.timestamp}
+↳ 📥 *_${tradutor.texto2[2]}_* ${v.ago}
+↳ 👁 *_${tradutor.texto2[3]}_* ${v.views}`;
+    }
+  }).filter((v) => v).join('\n\n◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦\n\n');
+  conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, m);
 };
-handler.help = ['google', 'googlef'].map((v) => v + ' <pencarian>');
-handler.tags = ['internet'];
-handler.command = /^googlef?$/i;
+handler.help = ['ytsearch *<texto>*'];
+handler.tags = ['search'];
+handler.command = ['ytsearch', 'yts'];
 export default handler;
-
- let ss2 = await ssweb(url, 'desktop')
-let dataa = ss2.result
-async function ssweb(url, device = 'desktop'){
-return new Promise((resolve, reject) => {
-const base = 'https://www.screenshotmachine.com'
-const param = { url: url, device: device, cacheLimit: 0 }
-axios({url: base + '/capture.php', method: 'POST', data: new URLSearchParams(Object.entries(param)), headers: { 'content-type': 'application/x-www-form-urlencoded; charset=UTF-8' }}).then((data) => {
-const cookies = data.headers['set-cookie']
-if (data.data.status == 'success') {
-axios.get(base + '/' + data.data.link, { headers: { 'cookie': cookies.join('') }, responseType: 'arraybuffer' }).then(({ data }) => {
-let result = { status: 200, author: '@BrunoSobrino', result: data }
-resolve(result)})
-} else {
-reject({ status: 404, author: 'Ryzn', message: data.data })}}).catch(reject)})}*/
