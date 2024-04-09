@@ -55,8 +55,8 @@ for (let i = 0; i < img.length; i++) {
     }
   }
 };
-handler.command = /^(instagramdl|instagram|انستغرام|ig|انستا|instagram2|igdl2|ig2|instagramdl3|instagram3|igdl3|ig3)$/i;
-export default handler;
+handler.help = ['انستا']
+handler.tags = ['انستا']
 
 const getBuffer = async (url, options) => {
     options = options || {};
