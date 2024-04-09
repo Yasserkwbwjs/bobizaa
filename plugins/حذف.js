@@ -9,7 +9,7 @@ return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id
 } catch {
 return conn.sendMessage(m.chat, { delete: m.quoted.vM.key })
 }}
-handler.help = ['del', 'delete']
+handler.help = ['حذف', 'delete']
 handler.tags = ['group']
 handler.command = /^حذف|احذف(ete)?$/i
 handler.group = true
