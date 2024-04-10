@@ -5,7 +5,7 @@ m.reply(`*قائمة القروبات التي رينجو بداخلها:*
 ${txt}
 `.trim())
 }
-handler.help = ['groups', 'grouplist']
+handler.help = ['الجروبات', 'grouplist']
 handler.tags = ['info']
 handler.command = /^(الجروبات|grouplist|listadegrupo|gruposlista|listagrupos)$/i
 export default handler
