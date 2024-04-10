@@ -5,7 +5,7 @@ let handler = m => m;
  let responses; 
  if (/^رينجو$/i.test(m.text)) { 
  responses = [ 
- 'تحت امرك حبي'
+ '*تحت امرك حبي🏵️*'
  ]; 
  } else if (/^سلام عليكم$/i.test(m.text)) { 
      responses = [ 
