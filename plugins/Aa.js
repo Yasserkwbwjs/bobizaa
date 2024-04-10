@@ -21,7 +21,7 @@ let handler = m => m;
      ];
   }else if (/^احبك$/i.test(m.text)) { 
      responses = [ 
-       '*وانا كمان🌷*',
+       '*وانا كمان💝*',
      ];
   }else if (/^هلا$/i.test(m.text)) { 
      responses = [ 
