@@ -19,9 +19,9 @@ let handler = m => m;
      responses = [ 
        '*💫شغال شغال تست*',  
      ];
-  }else if (/^احبك|اموت فيك|$/i.test(m.text)) { 
+  }else if (/^احبك$/i.test(m.text)) { 
      responses = [ 
-       '*وانا كمان 💝*',  
+       '*وانا كمان🌷*',
      ];
   }else if (/^هلا$/i.test(m.text)) { 
      responses = [ 
