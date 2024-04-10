@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text, command }) => {
 let id = text ? text : m.chat  
-await conn.reply(id, '*لقد قضيت معكم وقتاً رائعاً الى اللقاء تحياتي رينجو بوت ⁦^⁠_⁠^⁩*') 
+await conn.reply(id, '*لقد استمتعت بوقتي معكم مع السلامة 🩵 ⁦^⁠_⁠^⁩*') 
 await conn.groupLeave(id)}
 handler.command = /^(اخرج|اطلع|غادر|خروج)$/i
 handler.group = true
