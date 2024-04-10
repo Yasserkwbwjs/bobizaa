@@ -19,6 +19,14 @@ let handler = m => m;
      responses = [ 
        '*💫شغال شغال تست*',  
      ];
+  }else if (/^احبك|اموت فيك|$/i.test(m.text)) { 
+     responses = [ 
+       '*وانا كمان 💝*',  
+     ];
+  }else if (/^هلا$/i.test(m.text)) { 
+     responses = [ 
+       '*هلا نورت يا عمري🌷*',  
+     ];
  }
  if (responses) { 
  let randomIndex = Math.floor(Math.random() * responses.length); 
