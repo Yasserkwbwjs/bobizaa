@@ -37,7 +37,7 @@ conn.sendFile(m.chat, vn, 'error.mp3', null, m, true, {
 type: 'audioMessage',
 ptt: true })}
 handler.help = handler.command = ['توب']
-handler.tags = ['fun']
+handler.tags = ['توب']
 handler.group = true
 handler.limit = 2
 export default handler
