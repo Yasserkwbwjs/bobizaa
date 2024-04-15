@@ -80,8 +80,10 @@ function clockString(ms) {
       }
       if (time >= 10) {
         res = "مساء الخير ☀️"
-      await conn.sendMessage(m.chat, { react: { text: '🎮', key: m.key } })
+      if (time >= 18) {
+        res = "مساء الخير 🌙"
       }
+      return res}
       if (time >= 18) {
         res = "مساء الخير 🌙"
       }
