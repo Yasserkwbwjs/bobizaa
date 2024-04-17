@@ -21,7 +21,7 @@ global.suittag = ['212617467234'];
 global.prems = ['212617467234'];
 
 global.packname = ' Ringo 🌹';
-global.author = 'Ringo 🍁';
+global.author = '';
 global.wm = 'Ringo🌒';
 global.titulowm = 'Ringo🤗';
 global.titulowm2 = `Ringo💝`
