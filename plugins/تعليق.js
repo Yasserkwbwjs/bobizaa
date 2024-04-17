@@ -4,7 +4,7 @@ const handler = async (m, {conn, text}) => {
     avatar: await conn.profilePictureUrl(m.sender, 'image').catch((_) => 'https://telegra.ph/file/24fa902ead26340f3df2c.png'),
     comment: text,
     username: conn.getName(m.sender),
-  }), 'error.png', '*❆╼━━❆ •﹝*『🍷┇𝐒𝐔𝐍𝐆 𝐁𝐎𝐓*﹞• ❆━━╾❆*', m);
+  }), 'error.png', '*❆╼━━❆ •﹝*༄ˢᵀ᭄✿𝑹 𝑰 𝑵 𝑮 𝑶࿐*﹞• ❆━━╾❆*', m);
 };
 handler.help = ['ytcomment <comment>'];
 handler.tags = ['maker'];
