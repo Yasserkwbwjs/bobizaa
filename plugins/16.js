@@ -28,7 +28,7 @@ var hawemod = [
  }
 loading()    
 };
-handler.help = ['love'];
+handler.help = ['احبك'];
 handler.tags = ['fun'];
-handler.command = /^(قلب)$/i;
+handler.command = /^(احبك)$/i;
 export default handler;
