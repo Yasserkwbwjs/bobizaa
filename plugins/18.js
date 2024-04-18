@@ -29,7 +29,7 @@ let handler = async (m, {
         throw eror
     }
 }
-handler.help = ["freepik"]
+handler.help = ["فريبيك"]
 handler.tags = ["internet"]
 handler.command = /فريبيك$/i
 
