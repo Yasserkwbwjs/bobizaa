@@ -20,7 +20,7 @@ global.owner = [
 global.suittag = ['212617467234'];
 global.prems = ['212617467234'];
 
-global.packname = ' Ringo 🌹';
+global.packname = '*ديابلو♣️*';
 global.author = '꧁★𝘿𝒊𝒂𝒃𝒍𝒐★꧂';
 global.wm = 'Ringo🌒';
 global.titulowm = 'Ringo🤗';
