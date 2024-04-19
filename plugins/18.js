@@ -1,52 +1,26 @@
-import axios from "axios"
-import fetch from "node-fetch"
-import cheerio from "cheerio"
-import {
-    JSDOM
-} from "jsdom"
+import fetch from 'node-fetch';
 
-let handler = async (m, {
-    conn,
-    args,
-    usedPrefix,
-    text,
-    command
-}) => {
-    if (!text) throw "أكتب اسم الصورة التي تبحث عنها "
-    try {
-            await m.reply(wait)
-            let res = await FreePik(text)
-            let rdm = res[Math.floor(Math.random() * res.length)];
-            await conn.sendMessage(m.chat, {
-                image: {
-                    url: rdm
-                }, caption: "[ أليست هذه  هي الصورة التي طلبتها  ]"
-            }, {
-                quoted: m
-            })
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+  if (!text) throw `*هذا الأمر خاص بتوليد الصور باستعمال الذكاء الإصطناعي*\n\n*مثال*\n*${usedPrefix + command} girl and yellow cat*`;
 
-    } catch (e) {
-        throw eror
+  try {
+    m.reply('*الرجاء الانتظار، جاري إنشاء الصور...*');
+
+    const endpoint = `https://cute-tan-gorilla-yoke.cyclic.app/imagine?text=${encodeURIComponent(text)}`;
+    const response = await fetch(endpoint);
+
+    if (response.ok) {
+      const imageBuffer = await response.buffer();
+      await conn.sendFile(m.chat, imageBuffer, 'image.png', null, m);
+    } else {
+      throw '*فشل إنشاء الصورة*';
     }
-}
-handler.help = ["فريبيك"]
-handler.tags = ["internet"]
-handler.command = /فريبيك$/i
-
-export default handler
-
-/* New Line */
-async function FreePik(query) {
-let res = await fetch('https://www.freepik.com/search?format=search&query=' +query+ '&type=psd')
-    let html = await res.text()
-    let dom = new JSDOM(html)
-    var collection = dom.window.document.getElementsByTagName('img');
-    let img = []
-for (var i = 0; i < collection.length; i++) {
-  if (collection[i].getAttribute('src').startsWith('https://img.freepik.com')) {
-  img.push(collection[i].getAttribute('src'))
+  } catch {
+    throw '*أُووبس! حدث خطأ ما أثناء إنشاء الصور. الرجاء معاودة المحاولة في وقت لاحق.*';
   }
-}
-let newArr = img.filter(el => el != null);
-return newArr
-}
+};
+
+handler.help = ['صونع'];
+handler.tags = ['drawing'];
+handler.command = ['صونع'];
+export default handler;
