@@ -1,26 +1,23 @@
-import fetch from 'node-fetch';
+import fetch from "node-fetch"
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) throw `*هذا الأمر خاص بتوليد الصور باستعمال الذكاء الإصطناعي*\n\n*مثال*\n*${usedPrefix + command} girl and yellow cat*`;
-
-  try {
-    m.reply('*الرجاء الانتظار، جاري إنشاء الصور...*');
-
-    const endpoint = `https://cute-tan-gorilla-yoke.cyclic.app/imagine?text=${encodeURIComponent(text)}`;
-    const response = await fetch(endpoint);
-
-    if (response.ok) {
-      const imageBuffer = await response.buffer();
-      await conn.sendFile(m.chat, imageBuffer, 'image.png', null, m);
-    } else {
-      throw '*فشل إنشاء الصورة*';
+        let wm = global.me
+        if (!text) throw `توليد صور أنمي بالذكاء الاصطناعي مثال:\n\n${ usedPrefix + command } girl`
+        await m.reply('*انتظر قليلا*')
+        await conn.relayMessage(m.chat, { reactionMessage: { key: m.key, text: '⌛'  }}, { messageId: m.key.id })
+        try {
+        let ff = await fetch(`https://api.neoxr.eu/api/waifudiff?q=${text}`)
+        let anu = await ff.json()
+        await conn.sendFile(m.chat, anu.data.url, 'image.jpg', wm, m)
+        m.react('🎐')
+      } catch (e) {
+        console.log(e)
+        m.reply('instagram.com/noureddine_ouafy')
+      }
     }
-  } catch {
-    throw '*أُووبس! حدث خطأ ما أثناء إنشاء الصور. الرجاء معاودة المحاولة في وقت لاحق.*';
-  }
-};
 
-handler.help = ['صونع'];
-handler.tags = ['drawing'];
-handler.command = ['صونع'];
-export default handler;
+handler.help = ['اورسوم']
+handler.tags = ['drawing']
+handler.command = /^(اورسوم)$/i
+
+export default handler
