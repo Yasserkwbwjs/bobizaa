@@ -12,7 +12,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         m.react('🎐')
       } catch (e) {
         console.log(e)
-        m.reply('instagram.com/noureddine_ouafy')
+        m.reply('༄✿𝑹 𝑰 𝑵 𝑮 𝑶࿐')
       }
     }
 
