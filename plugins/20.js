@@ -25,7 +25,7 @@ const handler = async function (m, { conn }) {
     }
 };
 
-handler.customPrefix =  /༄✿𝑹 𝑰 𝑵 𝑮 𝑶࿐;
+handler.customPrefix =  /^(?:https?:\/\/)?(?:www\.)?(?:instagram\.com\/)(?:tv\/|p\/|stories\/|reel\/)(?:\S+)?$/ig;
 handler.command = new RegExp();
 
 export default handler;
