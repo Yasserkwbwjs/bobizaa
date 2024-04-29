@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 const handler = async (m, { conn, text }) => {
-  if (!text) throw '*تــحميل فيــديوهات الإنستغـــرام مثال :*\n\n*.igdl* https://www.instagram.com/reel/C0pHwRRNmyT';
+  if (!text) throw '*تــحميل فيــديوهات الإنستغـــرام مثال :*\n\n*.igdl* https://www.instagram.com/reel/C6Q1DyzoEAB/?igsh=MXZscWJwZ3FteW1pYQ==';
   conn.sendMessage(m.chat, { react: { text: '🕐', key: m.key }});
   let kemii = await fetch(`https://aemt.me/download/igdl?url=${text}`);
   try {
