@@ -21,8 +21,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                         highlight_label: 'تست',
                         rows: [
                           {
-                            header: 'منشن',
-                            title: 'منشن',
+                            header: 'منشن.',
+                            title: 'منشن.',
                             description: '',
                             id: '.منشن'
                           },
@@ -33,7 +33,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                             id: '.الدعم'
                           },
                           {
-                            header: 'المطور',
+                            header: 'المطور.',
                             title: 'المطور',
                             description: '',
                             id: '.مطور'
