@@ -7,7 +7,7 @@ const streamPipeline = promisify(pipeline);
 
 var handler = async (m, { conn, command, text, usedPrefix }) => {
 
-    if (!text) throw `مثال: \n${usedPrefix}${command} https://www.youtube.com/watch?v=LrsNYeLqRAU&t=0`;
+    if (!text) throw `مثال: \n${usedPrefix}${command} https://youtube.com/shorts/C0qoE5mLrQY?si=Uo_ZOlyMFxwSlqH-`;
 
     const videoUrl = text;
 
