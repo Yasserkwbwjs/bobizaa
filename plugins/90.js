@@ -1,60 +1,37 @@
-import fetch from "node-fetch"
+import fetch from 'node-fetch'
+import { pinterest } from '../lib/scrape2.js'
 
-let handler = async (m, {
-    conn,
-    args,
-    usedPrefix,
-    command
-}) => {
-    let text
-    if (args.length >= 1) {
-        text = args.slice(0).join(" ")
-    } else if (m.quoted && m.quoted.text) {
-        text = m.quoted.text
-    } else throw "مثال :\n*.gptphoto* boy"
-    await m.reply(wait)
-
-    try {
-        let data = await generateImage(text)
-        if (data && data.imgs.length > 0) {
-                for (let i = 0; i < data.imgs.length; i++) {
-                await conn.sendFile(m.chat, data.imgs[i], '', `Image *(${i + 1}/${data.imgs.length})*`, m, false, {
-                    mentions: [m.sender]
-                });
-            }
-            }
-    } catch (e) {
-        await m.reply('error')
-    }
-}
-handler.help = ["gptphoto"]
-handler.tags = ["drawing"];
-handler.command = /^(gptphoto)$/i
-
-export default handler
-
-/* New Line */
-async function generateImage(captionInput) {
-  const data = {
-    captionInput,
-    captionModel: "default"
-  };
-
-  const url = 'https://chat-gpt.photos/api/generateImage';
+let handler = async (m, { conn, command, text, usedPrefix }) => {
 
   try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
+    const hasil = await pinterest('Hunter × Hunter 4K');
+    let gambarUrls = hasil.slice(0, 20); // Ambil 20 gambar pertama
 
-    const result = await response.json();
-    return result;
-  } catch (error) {
-    console.error("Error:", error);
-    throw error;
+    // Mengacak array gambarUrls
+    for (let i = gambarUrls.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [gambarUrls[i], gambarUrls[j]] = [gambarUrls[j], gambarUrls[i]];
+    }
+
+    // Mengirim 10 gambar secara acak
+    for (let i = 0; i < 5; i++) {
+      let imageUrl = gambarUrls[i];
+      let imageRes = await fetch(imageUrl);
+      let imageBuffer = await imageRes.buffer();
+
+      // Menggunakan fungsi sendImage untuk mengirim gambar ke WhatsApp
+      await conn.sendFile(m.chat, imageBuffer, 'Dragon-ball-z.jpg', '');
+
+      // Tambahkan jeda agar tidak mengirim gambar terlalu cepat
+      await new Promise(resolve => setTimeout(resolve, 500));
+    }
+  } catch (e) {
+    console.log(e)
+    conn.reply(m.chat, 'Error', m)
   }
 }
+
+handler.help = ['hunter']
+handler.tags = ['anime']
+handler.command = /^hunter$/i
+export default handler
