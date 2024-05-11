@@ -78,7 +78,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
         );
         conn.reply(
           m.chat,
-          "اذا كنت تحب بوبيزة فتابع صاحبها 😄\ninstagram.com/noureddine_ouafy",
+          "❤️ \قول شكرا",
           m,
         );
       }, 1500);
